@@ -16,7 +16,7 @@ class App extends Component {
         e.src = "https://apis.google.com/js/client:platform.js?onload=gPOnLoad";
         var t = document.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(e, t)
-    })();    
+    })();
   }
 
   //Triggering login for google
@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   googleSignInCallback = (e) => {
-    console.log( e )
+    // console.log( e )
     if (e["status"]["signed_in"]) {
         window.gapi.client.load("plus", "v1", function() {
             if (e["access_token"]) {
@@ -44,7 +44,7 @@ class App extends Component {
             }
         }.bind(this));
     } else {
-        console.log('Oops... Error occured while importing data')
+      console.log('Oops... Error occured while importing data')
     }
   }
 
