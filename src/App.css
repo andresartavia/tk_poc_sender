@@ -17,14 +17,15 @@
 }
 
 button {
-  background-image: url('./assets/btn_google_1x.png');
+  background-image: url('./assets/btn_google_white.png');
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  height: 50px;
+  height: 48px;
   margin-top: 40px;
   outline: none;
-  width: 193px;
+  width: 192px;
+  background-color: #F2F2F2;
 }
 
 p {
