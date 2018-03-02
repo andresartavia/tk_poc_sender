@@ -29,7 +29,7 @@ class App extends Component {
         clientid: variables.google, //Google client Id
         cookiepolicy: "single_host_origin",
         requestvisibleactions: "http://schema.org/AddAction",
-        scope: "https://www.googleapis.com/auth/plus.login email"
+        scope: "https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/analytics.readonly email"
     });
   }
 
