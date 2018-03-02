@@ -6,6 +6,9 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      picture: ''
+    }
   }
 
   componentDidMount(){
@@ -62,6 +65,9 @@ class App extends Component {
             //Profile data
             alert("Successfull login from google : "+ e.displayName )
             console.log( e );
+            this.setState({
+              picture: e.image.url
+            })
             return;
         }
     }.bind(this));
@@ -75,6 +81,7 @@ class App extends Component {
           <p className="App-intro">
             Welcome to Trendkite's Proof of Concept for a OAuth and Google Analytics Integration.
           </p>
+          <img src={this.state.picture ? this.state.picture : null} />
           <button onClick={() => this.googleLogin()} />
         </div>
       </div>
